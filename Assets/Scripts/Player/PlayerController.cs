@@ -28,6 +28,5 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpSpeed);
-        checkGround.isGrounded = false;
     }
 }

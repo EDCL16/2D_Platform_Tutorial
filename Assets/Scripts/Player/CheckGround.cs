@@ -10,4 +10,12 @@ public class CheckGround : MonoBehaviour
             isGrounded = true;
         }
     }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Platform"))
+        {
+            isGrounded = false;
+        }
+    }
 }
