@@ -584,7 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662925ed952209346967c73d70feba92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelCount: 5
+  levelCount: 30
   levelSelectButtonPrefeb: {fileID: 4916170088983759570, guid: 36e3806c827df854a8fd33228fc0881a, type: 3}
 --- !u!1 &1434889790
 GameObject:
