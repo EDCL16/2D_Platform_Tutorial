@@ -6,10 +6,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField]private float jumpSpeed = 5f;
     private Rigidbody2D rb;
     private CheckGround checkGround;
+    private PlayerAnimation playerAnimation;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         checkGround = GetComponentInChildren<CheckGround>();
+        playerAnimation = GetComponent<PlayerAnimation>();
     }
 
     void Update()
@@ -22,7 +24,7 @@ public class PlayerController : MonoBehaviour
             Jump();
         }
 
-
+        playerAnimation.SetIsMoving(rb.linearVelocityX);
     }
 
     void Jump()
