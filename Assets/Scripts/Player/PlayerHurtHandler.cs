@@ -12,11 +12,11 @@ public class PlayerHurtHandler : MonoBehaviour
         playerAnimation = GetComponent<PlayerAnimation>();
         healthBar = GetComponentInChildren<HealthBar>();
         currentHealth = maxHealth;
-        healthBar.SetCurrent(maxHealth);
         healthBar.SetMax(maxHealth);
+        healthBar.SetCurrent(maxHealth);
     }
 
-    public void HandlePlayerHurt(int damageAmount)
+    public void PlayerHurt(int damageAmount)
     {
         playerAnimation.HurtAnimation();
 
