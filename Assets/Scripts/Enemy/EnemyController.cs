@@ -41,7 +41,9 @@ public class EnemyController : MonoBehaviour
         {
             return;
         }
-        bool hasObstacle = frontHit.collider.CompareTag("Ground") || frontHit.collider.CompareTag("Enemy");
+        bool hasObstacle = frontHit.collider.CompareTag("Platform") 
+        || frontHit.collider.CompareTag("Enemy");
+
         if (hasObstacle)
         {
             Flip();
