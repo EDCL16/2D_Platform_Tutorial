@@ -18,6 +18,8 @@ public class EnemyController : MonoBehaviour
     [Tooltip("檢測前方障礙物的 raycast 距離")]
     public float frontDetectionDistance = 0.5f;
 
+    [SerializeField] GameObject filpGameObject;
+
     void Update()
     {
         // 按目前方向移動
@@ -57,7 +59,7 @@ public class EnemyController : MonoBehaviour
         direction *= -1;
         // 反轉 Sprite：通過改變 x 軸縮放值
         //GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
-        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        filpGameObject.transform.localScale = new Vector3(-filpGameObject.transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 
     // 在 Scene 視窗中繪製 raycast 的檢測線，方便除錯
