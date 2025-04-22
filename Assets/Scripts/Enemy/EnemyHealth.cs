@@ -8,6 +8,12 @@ public class EnemyHealth : MonoBehaviour
     void Awake()
     {
         healthBar = GetComponentInChildren<HealthBar>();//從子物件找腳本
+
+    }
+
+    public void SetUpHealthBar(int maxHealth)
+    {
+        enemyHealth = maxHealth;
         healthBar.SetMax(enemyHealth);
         healthBar.SetCurrent(enemyHealth);
     }

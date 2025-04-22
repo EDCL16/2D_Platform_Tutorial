@@ -99,7 +99,9 @@ GameObject:
   - component: {fileID: 7279969619894647288}
   - component: {fileID: 6968353755951918993}
   - component: {fileID: 7832891152294201879}
-  - component: {fileID: 7835680459989135037}
+  - component: {fileID: 5136130944662898637}
+  - component: {fileID: 7174762789700098258}
+  - component: {fileID: 6491060527058811574}
   m_Layer: 10
   m_Name: EnemySlime (01)
   m_TagString: Enemy
@@ -216,7 +218,7 @@ MonoBehaviour:
   frontDetection: {fileID: 4549593094060365755}
   frontDetectionDistance: 0.5
   filpGameObject: {fileID: 4273820783146583895}
---- !u!114 &7835680459989135037
+--- !u!114 &5136130944662898637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,9 +227,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 1550888674261532659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ccd7a2c182b4684cb02b4af56ccd978, type: 3}
+  m_Script: {fileID: 11500000, guid: 88f71b5c73e5b8c4bb790f9579d1927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7174762789700098258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550888674261532659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c054140dfb7d9e459e9033f0c8e9548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: 7fa330a5ae510c84e9ea6da0ce8a745b, type: 2}
+--- !u!114 &6491060527058811574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550888674261532659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e66f06465693a40993cbcfb59919df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 5
+  healthBar: {fileID: 8388480438945443980}
 --- !u!1 &2019587415037265364
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +266,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7391724917954845120}
-  - component: {fileID: 8654046163965229072}
   - component: {fileID: 6041813336067150485}
   m_Layer: 9
   m_Name: EnemyHitBox
@@ -261,18 +289,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1324731605462376083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8654046163965229072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019587415037265364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ccd7a2c182b4684cb02b4af56ccd978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &6041813336067150485
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -543,3 +559,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1104911733565111764, guid: 08667ffe54323d44b9966a2eb290922a, type: 3}
   m_PrefabInstance: {fileID: 8063118137692532890}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8388480438945443980 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1985011813649727510, guid: 08667ffe54323d44b9966a2eb290922a, type: 3}
+  m_PrefabInstance: {fileID: 8063118137692532890}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b565c9345926c642a316c2fd6c6cf1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
