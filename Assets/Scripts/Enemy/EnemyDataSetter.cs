@@ -6,7 +6,7 @@ public class EnemyDataSetter : MonoBehaviour
 
     EnemyHealth enemyhealth;
     EnemyHurtPlayer enemyHurtPlayer;
-
+    
     void Awake()
     {
         enemyhealth = GetComponentInChildren<EnemyHealth>();//從子物件找腳本
