@@ -56,4 +56,13 @@ public class MovingPlatform : MonoBehaviour
             }
         }
     }
+
+    public Vector2 GetCurrentSpeed()
+    {
+        if (isWaiting || waypoints.Length <= 1)
+            return Vector2.zero;
+
+        Vector2 directionToTarget = (waypoints[currentIndex].position - transform.position).normalized;
+        return directionToTarget * speed;
+    }
 }
